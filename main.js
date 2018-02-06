@@ -1,23 +1,23 @@
 $(document).ready(function() {
-  'use strict';
-  paper.install(window);
-  paper.setup(document.getElementById('mainCanvas'));
+    'use strict';
+    paper.install(window);
+    paper.setup(document.getElementById('mainCanvas'));
 
-  var tool = new Tool();
+    var tool = new Tool();
 
-  var c = Shape.Circle(200, 200, 80);
-  c.fillColor = 'black';
+    var c = Shape.Circle(200, 200, 80);
+    c.fillColor = 'black';
 
-  var text = new PointText(200, 200);
-  text.justification = 'center';
-  text.fillColor = 'white';
-  text.fontSize = 20;
-  text.content = 'hello world';
+    var text = new PointText(200, 200);
+    text.justification = 'center';
+    text.fillColor = 'white';
+    text.fontSize = 20;
+    text.content = 'hello world';
 
-  tool.onMouseDown = function(event) {
-    var c = Shape.Circle(event.point, 20);
-    c.fillColor = 'red ';
-  };
+    tool.onMouseDown = function(event) {
+        var c = Shape.Circle(event.point, 20);
+        c.fillColor = 'red ';
+    };
 
-  paper.view.draw();
+    paper.view.draw();
 });
