@@ -9,6 +9,11 @@ node_modules
 #macOS 폴더 속성
 .DS_Store
 
+
+#es5 files
+dist
+public/dist
+
 #임시 파일
 *.tmp
 *~
