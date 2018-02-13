@@ -1,10 +1,17 @@
 // Learning JavaScript
 // chapter 14 : Asynchronous Programming
 
-// Recursion(Find Factorials)
+// Scopes and Asynchronous execution
 
-function fact(n) {
-    if (n === 1) return 1;
-    return n * fact(n - 1);
+function countdown() {
+    let i;
+    console.log('Countdown:');
+
+    for (i = 5; i >= 0; i--) {
+        setTimeout(function() {
+            console.log(i === 0 ? 'GO!' : i);
+        }, (5 - i) * 1000);
+    }
 }
 
+countdown();
