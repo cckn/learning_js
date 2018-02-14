@@ -1,12 +1,19 @@
 // Learning JavaScript
 // chapter 15 :Date and time
 
-// Moment js
+// Date to String 
 
 const moment = require('moment-timezone');
 
-const d = moment.tz([2016, 3, 27, 9, 19], 'America/Los_Angeles').toDate();
-const s = moment.tz([2016, 3, 27, 9, 19], 'Asia/Seoul').toDate();
+const before = { d: new Date() };
+console.log(before.d instanceof Date);
 
-console.log(d);
-console.log(s);
+const json = JSON.stringify(before);
+const after = JSON.parse(json);
+
+console.log(after.d instanceof Date);
+console.log(typeof after.d);
+
+after.d = new Date(after.d);
+
+console.log(after.d instanceof Date);
