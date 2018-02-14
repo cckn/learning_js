@@ -25,7 +25,7 @@ module.exports = {
             "always"
         ],
         "no-console":"off",
-        "comma-dangle":["error","always"],
+        "comma-dangle":"off",
         "trailingComma": "off"
 
     }
