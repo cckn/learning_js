@@ -18,13 +18,15 @@ module.exports = {
         ],
         "quotes": [
             "error",
-            "all"
+            "single"
         ],
         "semi": [
             "error",
             "always"
         ],
         "no-console":"off",
-        "comma-dangle":"off"
+        "comma-dangle":["error","always"],
+        "trailingComma": "off"
+
     }
 };
